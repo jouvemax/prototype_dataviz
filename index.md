@@ -57,10 +57,10 @@
 
 <script src="d3.min.js"></script>
 <script src="d3-legend.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/queue.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
-<script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+<script src="scripts/d3.v4.min.js"></script>
+<script src="scripts/queue.v1.min.js"></script>
+<script src="scripts/topojson.v1.min.js"></script>
+<script src="scripts/d3-geo-projection.v1.min.js"></script>
 <script src="scripts/d3-tip.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js'></script>
 <script src="scripts/map.js"></script>
