@@ -34,7 +34,7 @@
    </section>
    <section class="panel">
     <h1>Energy and Heat</h1>
-    <!-- <div id='stackedBarChart' style="height: 400px; overflow-y: scroll;"> -->
+    <div id='stackedBarChart' style="height: 600px; overflow-y: scroll;">
   </section>
   <section class="panel">
     <h1>Industry and Manufacture</h1>
@@ -54,7 +54,7 @@
 </div>
 </body>
 
-<script src="d3.min.js"></script>
+<script src="d3.v5.min.js"></script>
 <script src="d3-legend.min.js"></script>
 <script src="scripts/d3.v4.min.js"></script>
 <script src="scripts/queue.v1.min.js"></script>
@@ -66,13 +66,13 @@
 <script src="scripts/bubble-plot.js"></script>
 <script src="scripts/transportation.js"></script>
 <script src="scripts/industry_plot.js"></script>
-<!-- <script src="scripts/barChart.js"></script> -->
+<script src="scripts/barChart.js"></script>
 <script type="text/javascript">
   displayMap();
   displayBubblePlot();
   displayTransportationPlot()
   displayIndustryPlot()
-  // emissionChart();
+  emissionChart();
 </script>
 
 </html>

@@ -1,20 +1,18 @@
 function emissionChart() {
     var margin = {top: 50, right: 20, bottom: 10, left: 120},
-        width = 800 - margin.left - margin.right,
+        width = 1100 - margin.left - margin.right,
         height = 4800 - margin.top - margin.bottom;
 
     var y = d3.scaleBand()
-        .domain([0, height], .3);
+        .rangeRound([0, height]).padding(0.3);
 
-    var x = d3.scaleLinear()
-        .domain([0, width]);
+    var x = d3.scaleLinear().rangeRound([0, width]);
 
-    var color = d3.scaleBand()
-        .domain(["#A31621", "#FF890A", "#FCBF49", "#A6994F", "#4C7F4F","#488B49","#4AAD52","#034732"]);
+    var color = d3.scaleOrdinal().range(["#A31621", "#FF890A", "#FCBF49", "#A6994F", "#4C7F4F","#488B49","#4AAD52","#034732"]);
 
-    var xAxis = d3.axisTop(x)
+    var xAxis = d3.axisTop(x);
 
-    var yAxis = d3.axisLeft(y)
+    var yAxis = d3.axisLeft(y);
 
     var svg = d3.select("#stackedBarChart").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -26,14 +24,13 @@ function emissionChart() {
     color.domain(["coal", "oil", "gas", "nuclear", "solar", "hydro", "wind", "other renewables"]);
     let sources = ["coal", "oil", "gas", "nuclear", "solar", "hydro", "wind", "other renewables"]
 
-    d3.csv("http://127.0.0.1:8887/data/electricity_emissions.csv", function(error, data) {
+    d3.csv("./data/electricity_emissions.csv", function(error, data) {
         const current_year = "2019";
         let current_data = [];
 
         data.forEach( (d, i) => {
 
             if ((d["Year"]) == current_year){
-                console.log(d);
                 let total = 0;
                 sources.map(name => {
                     //from string to number
