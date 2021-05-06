@@ -64,8 +64,8 @@ const path = d3.geoPath().projection(projection);
 svg.call(tip);
 
 queue()
-  .defer(d3.json, 'https://jouvemax.github.io/prototype_dataviz/data/world_countries.json')
-  .defer(d3.tsv, 'https://jouvemax.github.io/prototype_dataviz//data/world_emissions.tsv')
+  .defer(d3.json, './data/world_countries.json')
+  .defer(d3.tsv, './data/world_emissions.tsv')
   .await(ready);
 
 function ready(error, data, emissions) {
