@@ -75,13 +75,9 @@ function emissionChart() {
             .attr("class", "bar")
             .attr("transform", d => { return "translate(0," + y(d.Entity) + ")"; });
 
-        console.log("vakken is", vakken);
-
         var bars = vakken.selectAll("rect")
             .data(d => { return d.boxes; })
             .enter().append("g").attr("class", "subbar");
-
-        console.log("Y is", y.range());
 
         bars.append("rect")
             .attr("height", y.bandwidth())
