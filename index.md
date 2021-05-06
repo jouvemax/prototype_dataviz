@@ -35,7 +35,7 @@
    </section>
    <section class="panel">
     <h1>Energy and Heat</h1>
-    <div id='stackedBarChart' style="height: 600px; overflow-y: scroll;">
+    <div id='stackedBarChart' style="height: 600px; overflow-y: scroll;"></div>
   </section>
   <section class="panel">
     <h1>Industry and Manufacture</h1>
