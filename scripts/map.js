@@ -64,8 +64,8 @@ const path = d3.geoPath().projection(projection);
 svg.call(tip);
 
 queue()
-  .defer(d3.json, 'http://127.0.0.1:8887/data/world_countries.json')
-  .defer(d3.tsv, 'http://127.0.0.1:8887/data/world_emissions.tsv')
+  .defer(d3.json, '../data/world_countries.json')
+  .defer(d3.tsv, '../data/world_emissions.tsv')
   .await(ready);
 
 function ready(error, data, emissions) {
