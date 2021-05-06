@@ -1,5 +1,6 @@
 function displayIndustryPlot() {
 
+
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 30, bottom: 0, left: 10},
     width = 700 - margin.left - margin.right,

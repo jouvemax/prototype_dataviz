@@ -17,6 +17,7 @@
     </section>
     <section class="panel">
 
+
       <h1>A Global Overview</h1>
 
       <div id="emissions-bar">51 billions tons Co2e / year</div>
