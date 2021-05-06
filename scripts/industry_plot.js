@@ -16,7 +16,7 @@ var svg = d3.select("#industryPlot")
 
 // Parse the Data
 // d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv", function(data) {
-  d3.csv("http://127.0.0.1:8887/data/industry.csv", function(data) {
+  d3.csv("./data/industry.csv", function(data) {
 
   // List of groups = header of the csv files
   var keys = data.columns.slice(1)

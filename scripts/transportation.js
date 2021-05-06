@@ -15,7 +15,7 @@
           "translate(" + margin.left + "," + margin.top + ")");
 
   // read json data
-  d3.json("http://127.0.0.1:8887/data/transport.json", function(data) {
+  d3.json("./data/transport.json", function(data) {
 
     // Give the data to this cluster layout:
     var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -51,25 +51,17 @@
         .attr('height', function (d) { return d.y1 - d.y0; })
         .style("fill", function(d){ 
           return color(d.data.name)} )
-   
-    d3.select("body")
-       .append("svg")
-       .attr("href", "train.svg")
-       .attr("width", 40)
-       .attr("height", 40)
-       .attr("x", 100)
-       .attr("y",60);
 
 
     var myimage = svg.append('image')
-      .attr('xlink:href', "img/baby-car.svg")
+      .attr('xlink:href', "./img/baby-car.svg")
       .attr('width', 50)
       .attr('height', 50)
       .attr("x", 450)
       .attr("y",25);
 
     var myimage = svg.append('image')
-      .attr('xlink:href', "img/yatch.svg")
+      .attr('xlink:href', "./img/yatch.svg")
       .attr('width', 50)
       .attr('height', 50)
       .attr("x", 450)
@@ -77,21 +69,21 @@
 
 
     var myimage = svg.append('image')
-      .attr('xlink:href', "img/plane.svg")
+      .attr('xlink:href', "./img/plane.svg")
       .attr('width', 50)
       .attr('height', 70)
       .attr("x", 450)
       .attr("y",175);
 
     var myimage = svg.append('image')
-      .attr('xlink:href', "img/truck.svg")
+      .attr('xlink:href', "./img/truck.svg")
       .attr('width', 50)
       .attr('height', 50)
       .attr("x", 450)
       .attr("y",250);
 
     var myimage = svg.append('image')
-      .attr('xlink:href', "img/train.svg")
+      .attr('xlink:href', "./img/train.svg")
       .attr('width', 50)
       .attr('height', 50)
       .attr("x", 450)
